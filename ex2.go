@@ -24,4 +24,8 @@ func main() {
 	// display the data type
 	fmt.Printf("%T \n", isOver40)
 
+	fmt.Println("true && flase = ", true && false)
+	fmt.Println("true || flase = ", true || false)
+	fmt.Println("!true = ", !true)
+
 }
