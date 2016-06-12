@@ -14,4 +14,9 @@ func main() {
 	var num99 = .9999
 	fmt.Println(numOne + num99)
 
+	fmt.Println("6 + 4 = ", 6+4)
+	fmt.Println("6 - 4 = ", 6-4)
+	fmt.Println("6 * 4 = ", 6*4)
+	fmt.Println("6 / 4 = ", 6/4)
+	fmt.Println("6 % 4 = ", 6%4)
 }
