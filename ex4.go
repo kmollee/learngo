@@ -26,4 +26,13 @@ func main() {
 	for _, value := range favNum2 {
 		fmt.Println(value)
 	}
+
+	// slice
+	numSlice := []int{5, 4, 3, 2, 1}
+	numSlice2 := numSlice[3:5]
+
+	fmt.Println("numSlice2[0] = ", numSlice2[0])
+	numSlice3 := numSlice[:2]
+
+	fmt.Println("numSlice3 = ", numSlice3)
 }
