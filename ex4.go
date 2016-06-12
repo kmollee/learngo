@@ -18,6 +18,7 @@ func main() {
 	favNum2 := [5]float64{6, 7, 8, 9, 10}
 
 	// similar to python's enumerate
+	// range example https://gobyexample.com/range
 	for i, value := range favNum2 {
 		fmt.Println(value, i)
 	}
