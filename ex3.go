@@ -26,4 +26,14 @@ func main() {
 	} else {
 		fmt.Println("You are too young")
 	}
+
+	switch yourAge {
+	case 16:
+		fmt.Println("Go drive")
+	case 18:
+		fmt.Println("Go vote")
+	default:
+		fmt.Println("Go have fun")
+
+	}
 }
