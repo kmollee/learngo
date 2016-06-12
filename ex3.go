@@ -17,10 +17,13 @@ func main() {
 	}
 
 	// if condition
+	// only execute one, even serverl condition is true
 	yourAge := 18
 	if yourAge >= 18 {
 		fmt.Println("You can drive")
+	} else if yourAge >= 20 {
+		fmt.Println("You can vote")
 	} else {
-		fmt.Println("You can't drive")
+		fmt.Println("You are too young")
 	}
 }
