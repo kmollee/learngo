@@ -30,6 +30,16 @@ func subtractThem(args ...int) int {
 	return finalValue
 }
 
+/*
+recursive function about factorial
+*/
+func factorial(num int) int {
+	if num == 0 {
+		return 1
+	}
+	return num * factorial(num-1)
+}
+
 func main() {
 	listNums := []float64{1, 2, 3, 4, 5}
 	fmt.Println("Sum :", addThemUp(listNums))
@@ -38,4 +48,6 @@ func main() {
 	fmt.Println(num1, num2)
 
 	fmt.Println(subtractThem(1, 2, 3, 4, 5))
+
+	fmt.Println(factorial(3))
 }
