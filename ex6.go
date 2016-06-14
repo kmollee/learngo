@@ -55,6 +55,14 @@ func safeDiv(num1 int, num2 int) int {
 	return solution
 }
 
+/*
+pointer apply
+function take a pointer, as parameter
+*/
+func changeXVal(xPrt *int) {
+	*xPrt = 2
+}
+
 func main() {
 	listNums := []float64{1, 2, 3, 4, 5}
 	fmt.Println("Sum :", addThemUp(listNums))
@@ -73,4 +81,21 @@ func main() {
 	printOne()
 
 	fmt.Println(safeDiv(3, 0))
+
+	// pointer examine
+	x := 0
+	fmt.Println("Now x =", x)
+	// there should pass a refer, as pointer
+	changeXVal(&x)
+	fmt.Println("after change x, x =", x)
+	fmt.Println("the address of x is", &x)
+
+	/*
+		func new(Type) *Type
+		The new built-in function allocates memory. The first argument is a type, not a value,
+		and the value returned is a pointer to a newly allocated zero value of that type.
+	*/
+	yPrt := new(int)
+	changeXVal(yPrt)
+	fmt.Println("now yPrt point to ", *yPrt)
 }
