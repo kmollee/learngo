@@ -36,4 +36,16 @@ func main() {
 	numSlice3 := numSlice[:2]
 
 	fmt.Println("numSlice3 = ", numSlice3)
+	// make([]int, 0, 10) allocates a slice of length 0 and capacity 10.
+	numSlice4 := make([]int, 5, 10)
+	fmt.Println("before append", numSlice4)
+
+	/*
+		func append(slice []Type, elems ...Type) []Type
+
+		The append built-in function appends elements to the end of a slice. If it has sufficient capacity, the destination is resliced to accommodate the new elements. If it does not, a new underlying array will be allocated. Append returns the updated slice. It is therefore necessary to store the result of append, often in the variable holding the slice itself:
+	*/
+	numSlice4 = append(numSlice4, 0, -1)
+	fmt.Println("after append", numSlice4)
+
 }
