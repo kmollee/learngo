@@ -40,6 +40,12 @@ func factorial(num int) int {
 	return num * factorial(num-1)
 }
 
+/*
+about defer function
+*/
+func printOne() { fmt.Println(1) }
+func printTwo() { fmt.Println(2) }
+
 func main() {
 	listNums := []float64{1, 2, 3, 4, 5}
 	fmt.Println("Sum :", addThemUp(listNums))
@@ -50,4 +56,10 @@ func main() {
 	fmt.Println(subtractThem(1, 2, 3, 4, 5))
 
 	fmt.Println(factorial(3))
+	// defer function will wait the main
+	// function execute finish
+	// then execute (like stack, LIFO)
+	defer printOne()
+	defer printTwo()
+	printOne()
 }
