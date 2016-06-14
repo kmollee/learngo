@@ -46,6 +46,15 @@ about defer function
 func printOne() { fmt.Println(1) }
 func printTwo() { fmt.Println(2) }
 
+func safeDiv(num1 int, num2 int) int {
+	defer func() {
+		// recover catch the error msg
+		fmt.Println(recover())
+	}()
+	solution := num1 / num2
+	return solution
+}
+
 func main() {
 	listNums := []float64{1, 2, 3, 4, 5}
 	fmt.Println("Sum :", addThemUp(listNums))
@@ -62,4 +71,6 @@ func main() {
 	defer printOne()
 	defer printTwo()
 	printOne()
+
+	fmt.Println(safeDiv(3, 0))
 }
